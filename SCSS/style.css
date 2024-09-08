@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  background: #f9f9fa;
+  padding: 130px 0 106px;
+  min-height: 100vh;
+}
+.container .inner_container {
+  max-width: 1280px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.container .inner_container .section_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+  padding-bottom: 80px;
+}
+.container .inner_container .section_header h2 {
+  font-size: 30px;
+  color: #0e0e0e;
+  font-family: "DM Sans", sans-serif;
+}
+.container .inner_container .section_header button {
+  width: 220px;
+  height: 56px;
+  overflow: hidden;
+  border: none;
+  color: #0e0e0e;
+  background: #E5ABF3;
+  border-radius: 30px;
+  padding: 0px 10px;
+  position: relative;
+  cursor: pointer;
+}
+.container .inner_container .section_header button .clone > *,
+.container .inner_container .section_header button .text > * {
+  opacity: 1;
+  font-size: 1.1rem;
+  transition: 0.2s;
+  margin-left: 4px;
+}
+.container .inner_container .section_header button .text > * {
+  transform: translate(-10px, -10px);
+}
+.container .inner_container .section_header button .clone > * {
+  transform: translate(60px, 60px);
+}
+.container .inner_container .section_header button:hover .clone > * {
+  opacity: 1;
+  transform: translate(-10px, -10px);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+.container .inner_container .section_header button:hover .text > * {
+  opacity: 1;
+  transform: translateY(-60px);
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
+}
+.container .inner_container .section_header button div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container .inner_container .services_container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+.container .inner_container .service {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border-radius: 15px;
+  background: white;
+  padding: 30px;
+  transition: box-shadow 0.3s linear;
+}
+.container .inner_container .service:hover {
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 80px 0px;
+}
+.container .inner_container .service button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Inter", system-ui;
+  color: #3c3c75;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.container .inner_container .service h2 {
+  font-size: 24px;
+  font-family: "DM Sans", sans-serif;
+  margin-bottom: 15px;
+}
+.container .inner_container .service p {
+  font-size: 20px;
+  font-family: "Inter", system-ui;
+}
+@media screen and (min-width: 767px) and (max-width: 991px) {
+  .container .inner_container {
+    max-width: 900px;
+    padding: 0 40px;
+  }
+  .container .inner_container .services_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container .inner_container .section_header h2 {
+    font-size: 48px;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 991px) and (max-width: 1199px) {
+  .container .inner_container {
+    padding: 0 40px;
+  }
+  .container .inner_container .services_container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container .inner_container .section_header {
+    flex-direction: row;
+  }
+  .container .inner_container .section_header h2 {
+    font-size: 60px;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container .inner_container .services_container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .container .inner_container .section_header {
+    flex-direction: row;
+    text-align: left;
+    gap: 70px;
+  }
+  .container .inner_container .section_header h2 {
+    font-size: 75px;
+  }
+}
